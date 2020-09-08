@@ -136,26 +136,9 @@ let arrBasket = [
   {
     id: 1,
     name: "Apple",
-    img: "./image/apple.png",
     country: "Ukraine",
     weight: 20,
     price: 1,
-  },
-  {
-    id: 2,
-    name: "Orange",
-    img: "./image/orange.png",
-    country: "Azerbaijan",
-    weight: 20,
-    price: 2,
-  },
-  {
-    id: 3,
-    name: "Pineapple",
-    img: "./image/pineapple.png",
-    country: "India",
-    weight: 19,
-    price: 1.3,
   }]
 
   // local storage
