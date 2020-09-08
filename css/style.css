@@ -1,0 +1,94 @@
+
+
+body {
+  margin: 0;
+  background-color: #e5c8bc;
+  background-size: 10px 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  outline: none; 
+}
+
+.topmenu {
+  backface-visibility: hidden;
+  background: rgba(102, 0, 0, 0.87);
+}
+
+.topmenu > li {
+  display: inline-block;
+  position: relative;
+}
+
+.topmenu > li > a {
+  font-family: 'Exo 2', sans-serif;
+  height: 70px;
+  line-height: 70px;
+  padding: 0 30px;
+  font-weight: bold;
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.topmenu #paragraph:hover {
+  background-color: rgba(51, 0, 0, 0.87);
+}
+
+h1, h2, p {
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  font-size: 16pt;
+  margin-bottom: 0;
+}
+
+#product_1 {
+  display: flex;
+  margin: 50px 0 0 0;
+  justify-content: space-around;
+}
+
+#product_2 {
+  display: flex;
+  margin: 50px 0 0 0;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.fruits {
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+}
+
+img {
+  background-color: #e5c8bc;
+  display: flex;
+  margin: auto;
+}
+
+input {
+  width: 35px;
+  height: 23px;
+}
+
+button {
+  width: 45px;
+  height: 33px;
+  background-color: rgb(196, 196, 196);
+  border: 1px solid grey;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(128, 128, 128);
+}

@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1",
+        "name": "Apple",
+        "country": "Ukraine",
+        "quantity": "20",
+        "price": "1",
+        "img": "image/apple.png"
+    },
+    {
+        "id": "2",
+        "name": "Orange",
+        "country": "Azerbaijan",
+        "quantity": "20",
+        "price": "2",
+        "img": "image/orange.png"
+    },
+    {
+        "id": "3",
+        "name": "Pineapple",
+        "country": "India",
+        "quantity": "19",
+        "price": "3",
+        "img": "image/pineapple.png"
+    },
+    {
+        "id": "4",
+        "name": "Pear",
+        "country": "Ukraine",
+        "quantity": "29",
+        "price": "1.5",
+        "img": "image/pear.png"
+    },
+    {
+        "id": "5",
+        "name": "Banana",
+        "country": "India",
+        "quantity": "23",
+        "price": "1.8",
+        "img": "image/banana.png"
+    },
+    {
+        "id": "6",
+        "name": "Cherry",
+        "country": "Ukraine",
+        "quantity": "14",
+        "price": "2.3",
+        "img": "image/cherry.png"
+    },
+    {
+        "id": "7",
+        "name": "Pomegranate",
+        "country": "Azerbaijan",
+        "quantity": "34",
+        "price": "2",
+        "img": "image/pomegranate.png"
+    },
+    {
+        "id": "8",
+        "name": "Mango",
+        "country": "India",
+        "quantity": "34",
+        "price": "6.5",
+        "img": "image/mango.png"
+    }
+]    
