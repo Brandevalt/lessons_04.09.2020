@@ -1,10 +1,20 @@
 body {
+  font-family: "Exo 2", sans-serif;
   margin: 0;
   background-size: 10px 10px;
 }
 a {
   text-decoration: none;
 }
+h1,
+h2,
+p {
+  text-align: center;
+  font-size: 16pt;
+  margin-bottom: 0;
+}
+
+
 .wrap {
   background-color: #e5c8bc;
   height: 100vh;
@@ -61,14 +71,7 @@ nav a {
   background-color: rgba(51, 0, 0, 0.87);
 }
 
-h1,
-h2,
-p {
-  font-family: "Exo 2", sans-serif;
-  text-align: center;
-  font-size: 16pt;
-  margin-bottom: 0;
-}
+
 
 #product_1 {
   display: flex;
@@ -115,6 +118,7 @@ button:hover {
 
 /* Admin page */
 .admin-page {
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   position: relative;
@@ -154,20 +158,39 @@ button:hover {
   border: 1px solid #999;
   background: #ccc;
   text-align: center;
+  padding: 10px 40px;
   font-weight: 500;
   cursor: pointer;
-  padding: 10px 0;
-  width: 80%;
 }
 .admin-page .btn:hover {
   border: 1px solid #fff;
   background: #55f72c;
 }
-.admin-page .form {
+.admin-page .modal-edit {
   border: 1px solid #999;
   background: #e4d4cd;
+  position: absolute;
+  display: none;
   height: 400px;
   z-index: 10;
   width: 40%;
+}
+
+.admin-page .modal-edit form{
+  justify-content: center;
+  flex-direction: column;  
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+.admin-page .modal-edit .item {
+  justify-content: space-between;
+  margin: 10px 0;
+  display: flex;
+  height: auto;
+  width: 80%;
+}
+.admin-page .modal-edit .item input{
+  width: 80%;
 }
 /*  */

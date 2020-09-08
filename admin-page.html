@@ -1,51 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="js/libs/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="wrap">
-      <section class="header">
-        <a href="index.html" class="logo">FRUIT SHOP</a>
-        <nav>
-          <ul class="topmenu">
-            <li id="paragraph"><a href="./catalog.html">Products</a></li>
-            <li id="paragraph"><a href="index.html">Basket</a></li>
-            <li id="paragraph"><a href="./admin-page.html">Admin page</a></li>
-          </ul>
-        </nav>
-      </section>
-      <section class="content admin-page">
-        <h1>Admin Page</h1>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>id</th>
-              <th>Title</th>
-              <th>Icon</th>
-              <th>Counry</th>
-              <th>Quantity</th>
-              <th>Price</th>
-              <th>Edit</th>
-              <th>Remove</th>
-            </tr>
-          </thead>
-          <tbody id="fruit-list"></tbody>
 
-          <tbody></tbody>
-        </table>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="js/libs/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-        <div class="btn">New product</div>
+<body>
+  <div class="wrap">
+    <section class="header">
+      <a href="index.html" class="logo">FRUIT SHOP</a>
+      <nav>
+        <ul class="topmenu">
+          <li id="paragraph"><a href="./catalog.html">Products</a></li>
+          <li id="paragraph"><a href="index.html">Basket</a></li>
+          <li id="paragraph"><a href="./admin-page.html">Admin page</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="content admin-page">
+      <h1>Admin Page</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>Title</th>
+            <th>Icon</th>
+            <th>Counry</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Edit</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody id="fruit-list"></tbody>
 
-        <div class="form"></div>
-      </section>
-      <footer></footer>
-    </div>
+        <tbody></tbody>
+      </table>
 
-    <script src="js/script.js"></script>
-  </body>
+      <div class="btn">New product</div>
+
+      <div class="modal-edit">
+        <h2>Edit product</h2>
+        <form></form>
+        <!-- <form>
+          <div class="item">
+            <label for="title">Title: </label>
+            <input type="text" id="title" value="">
+          </div>
+          <div class="item">
+            <label for="icon">Icon url: </label>
+            <input type="text" id="icon" value="">
+          </div>
+          <div class="item">
+            <label for="country">Country: </label>
+            <input type="text" id="country" value="">
+          </div>
+          <div class="item">
+            <label for="quantity">Quantity: </label>
+            <input type="number" id="quantity" value="">
+          </div>
+          <div class="item">
+            <label for="price">Price: </label>  
+            <input type="number" id="price" value="">
+          </div>
+          <div class="btn">save</div>
+        </form> -->
+      </div>
+    </section>
+    <footer></footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>
