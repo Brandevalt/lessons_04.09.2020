@@ -127,5 +127,56 @@ $(function () {
 })
 
 
-// 
+// Bogdan
+
+
+
+let basket = []
+let arrBasket = [
+  {
+    id: 1,
+    name: "Apple",
+    img: "./image/apple.png",
+    country: "Ukraine",
+    weight: 20,
+    price: 1,
+  },
+  {
+    id: 2,
+    name: "Orange",
+    img: "./image/orange.png",
+    country: "Azerbaijan",
+    weight: 20,
+    price: 2,
+  },
+  {
+    id: 3,
+    name: "Pineapple",
+    img: "./image/pineapple.png",
+    country: "India",
+    weight: 19,
+    price: 1.3,
+  }]
+
+  // local storage
+let basketJSON = JSON.stringify(arrBasket)
+localStorage.setItem("basket", basketJSON)
+const getBasket = JSON.parse(localStorage.getItem("basket"))
+
+
+getBasket.length > 0 &&
+  getBasket.map((item, i) => {
+    basket.push(`<tr><td>${i}</td><td>${item.name}</td>
+    <td>${item.weight} kg</td>
+    <td>${item.price} $</td>
+    
+  </tr>
+  `)
+  })
+  basket.push(`<tr>
+  <td colspan="3">Total:</td>
+  <td>Sum</td>
+  </tr>`)
+$("table tbody#basket-list").append(basket)
+
 
