@@ -1,27 +1,44 @@
-
-
 body {
   margin: 0;
-  background-color: #e5c8bc;
   background-size: 10px 10px;
 }
-
+a {
+  text-decoration: none;
+}
+.wrap {
+  background-color: #e5c8bc;
+  height: 100vh;
+  width: 100%;
+}
+.header {
+  background: rgba(102, 0, 0, 0.87);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.logo {
+  position: absolute;
+  color: #e5c8bc;
+  font-size: 24px;
+  left: 40px;
+}
 nav ul {
+  text-align: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 nav a {
   display: block;
   text-decoration: none;
-  outline: none; 
+  outline: none;
 }
 
 .topmenu {
   backface-visibility: hidden;
-  background: rgba(102, 0, 0, 0.87);
 }
 
 .topmenu > li {
@@ -30,21 +47,23 @@ nav a {
 }
 
 .topmenu > li > a {
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   height: 70px;
   line-height: 70px;
   padding: 0 30px;
   font-weight: bold;
   color: white;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .topmenu #paragraph:hover {
   background-color: rgba(51, 0, 0, 0.87);
 }
 
-h1, h2, p {
-  font-family: 'Exo 2', sans-serif;
+h1,
+h2,
+p {
+  font-family: "Exo 2", sans-serif;
   text-align: center;
   font-size: 16pt;
   margin-bottom: 0;
