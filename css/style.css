@@ -171,3 +171,14 @@ button:hover {
   width: 40%;
 }
 /*  */
+.content .basket table, th, td {
+  border: 1px solid black;
+}
+section.content .basket table{
+  border-collapse: collapse;
+  width: 100%;
+}
+.content .basket table, th, td {
+  height: 50px;
+}
+

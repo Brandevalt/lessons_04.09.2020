@@ -1,28 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basket</title>
     <script src="js/libs/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="wrap">
-      <section class="header">
-        <a href="index.html" class="logo">FRUIT SHOP</a>
-        <nav>
-          <ul class="topmenu">
-            <li id="paragraph"><a href="./catalog.html">Products</a></li>
-            <li id="paragraph"><a href="./basket.html">Basket</a></li>
-            <li id="paragraph"><a href="./admin-page.html">Admin page</a></li>
-          </ul>
-        </nav>
-      </section>
-      <section class="content"></section>
-      <footer></footer>
+        <section class="header">
+            <a href="index.html" class="logo">FRUIT SHOP</a>
+            <nav>
+                <ul class="topmenu">
+                    <li id="paragraph"><a href="./catalog.html">Products</a></li>
+                    <li id="paragraph"><a href="./basket.html">Basket</a></li>
+                    <li id="paragraph"><a href="./admin-page.html">Admin page</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="content basket">
+            <table style="
+            width: 90%;
+            margin: 10px;
+        ">
+                <tr>
+                    <th>№</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Apple (Ukraine)</td>
+                    <td><input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10"> kg</td>
+                    <td>2 $</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total</td>
+                    <td>Sum</td>
+                </tr>
+            </table>
+
+        </section>
+        <footer></footer>
     </div>
 
     <script src="js/script.js"></script>
-  </body>
+</body>
+
 </html>
