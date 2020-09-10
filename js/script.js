@@ -71,13 +71,12 @@ $(function () {
   localStorage.setItem("fruits", fruitsJSON)
   let getFruits = JSON.parse(localStorage.getItem("fruits"))
 
-
-
   // Yura
-  function addFruit() {    
-    getFruits.length == 0 ? $("table tbody#fruit-list").empty() :
-      getFruits.map((item, i) => {
-        fruit.push(`<tr><td>${i}</td><td>${item.name}</td><td>
+  function addFruit() {
+    getFruits.length == 0
+      ? $("table tbody#fruit-list").empty()
+      : getFruits.map((item, i) => {
+          fruit.push(`<tr><td>${i}</td><td>${item.name}</td><td>
         <img src="${item.img}" alt="${item.name}" />
       </td>
       <td>${item.country}</td>
@@ -90,14 +89,14 @@ $(function () {
         <img src="./image/icons/delete.svg" alt="delete" data-id="${i}" />
       </td>
     </tr>`)
-    $("table tbody#fruit-list").empty().append(fruit)
-      })
+          $("table tbody#fruit-list").empty().append(fruit)
+        })
 
-      $(".edit").on("click", "img", function () {
-        $('.modal-edit form').empty()
-        let id = $(this).data("id")
-        let ourElement = getFruits[id]
-        $('.modal-edit form').append(`
+    $(".edit").on("click", "img", function () {
+      $(".modal-edit form").empty()
+      let id = $(this).data("id")
+      let ourElement = getFruits[id]
+      $(".modal-edit form").append(`
       <div class="item">
         <label for="title">Title: </label>
         <input type="text" id="title" required value="${ourElement.name}">
@@ -120,47 +119,43 @@ $(function () {
       </div>
       <div  class="btn save">Save</div>
     `)
-    
-        $('.modal-edit').css({ display: 'block' }).hide(0).show(1000)
-    
-        $('.modal-edit form').on('click', '.save', function () {
-          
-          let newObj = {
-            id: ourElement.id,
-            name: $('#title').val(),
-            img: $('#icon').val(),
-            country: $('#country').val(),
-            weight: $('#quantity').val(),
-            price: $('#price').val(),
-          }
-          getFruits.splice(id, 1, newObj)
-          fruitsJSON = JSON.stringify(getFruits)
-          localStorage.setItem("fruits", fruitsJSON)
-          getFruits = JSON.parse(localStorage.getItem("fruits"))
-          $('.modal-edit').hide(1000)
-          fruit = []
-          addFruit()
-        })
-    
-    
-      })
-    
-      $(".delete").on("click", "img", function () {        
-        id = $(this).data("id")
-        getFruits.splice(id, 1)
+
+      $(".modal-edit").css({ display: "block" }).hide(0).show(1000)
+
+      $(".modal-edit form").on("click", ".save", function () {
+        let newObj = {
+          id: ourElement.id,
+          name: $("#title").val(),
+          img: $("#icon").val(),
+          country: $("#country").val(),
+          weight: $("#quantity").val(),
+          price: $("#price").val(),
+        }
+        getFruits.splice(id, 1, newObj)
         fruitsJSON = JSON.stringify(getFruits)
         localStorage.setItem("fruits", fruitsJSON)
         getFruits = JSON.parse(localStorage.getItem("fruits"))
+        $(".modal-edit").hide(1000)
         fruit = []
-        addFruit();
-        
+        addFruit()
       })
+    })
 
-      $(".admin-page").on("click", ".addNewFruit", function () {
-        $('.modal-edit form').empty()        
-         
-        $('.modal-edit h2').text("Add product")
-        $('.modal-edit form').append(`
+    $(".delete").on("click", "img", function () {
+      id = $(this).data("id")
+      getFruits.splice(id, 1)
+      fruitsJSON = JSON.stringify(getFruits)
+      localStorage.setItem("fruits", fruitsJSON)
+      getFruits = JSON.parse(localStorage.getItem("fruits"))
+      fruit = []
+      addFruit()
+    })
+
+    $(".admin-page").on("click", ".addNewFruit", function () {
+      $(".modal-edit form").empty()
+
+      $(".modal-edit h2").text("Add product")
+      $(".modal-edit form").append(`
         <div class="item">
           <label for="title">Title: </label>
           <input type="text" id="title" required value="">
@@ -183,47 +178,34 @@ $(function () {
         </div>
         <div  class="btn add">Add</div>
       `)
-      $('.modal-edit').css({ display: 'block' }).hide(0).show(1000)
-      
-
-      
-
-      
-      })
+      $(".modal-edit").css({ display: "block" }).hide(0).show(1000)
+    })
   }
 
-
   addFruit()
-  
-  $('.modal-edit form').on('click', '.add', function () {          
+
+  $(".modal-edit form").on("click", ".add", function () {
     let newObj = {
-     id: getFruits.length+1,
-     name: $('#title').val(),
-     img: $('#icon').val(),
-     country: $('#country').val(),
-     weight: $('#quantity').val(),
-     price: $('#price').val(),
-   }
+      id: getFruits.length + 1,
+      name: $("#title").val(),
+      img: $("#icon").val(),
+      country: $("#country").val(),
+      weight: $("#quantity").val(),
+      price: $("#price").val(),
+    }
 
-   getFruits.push(newObj)
-   fruitsJSON = JSON.stringify(getFruits)
-   localStorage.setItem("fruits", fruitsJSON)
-   getFruits = JSON.parse(localStorage.getItem("fruits"))
-   $('.modal-edit').hide(1000)
-   fruit = []
-   addFruit();
-   })
+    getFruits.push(newObj)
+    fruitsJSON = JSON.stringify(getFruits)
+    localStorage.setItem("fruits", fruitsJSON)
+    getFruits = JSON.parse(localStorage.getItem("fruits"))
+    $(".modal-edit").hide(1000)
+    fruit = []
+    addFruit()
+  })
 
-  // 
-  // 
-
-
+  //
+  //
 })
-
-
-
-
-
 
 // let basket = []
 // let arrBasket = [
@@ -240,13 +222,12 @@ $(function () {
 // localStorage.setItem("basket", basketJSON)
 // const getBasket = JSON.parse(localStorage.getItem("basket"))
 
-
 // getBasket.length > 0 &&
 //   getBasket.map((item, i) => {
 //     basket.push(`<tr><td>${i}</td><td>${item.name}</td>
 //     <td>${item.weight} kg</td>
 //     <td>${item.price} $</td>
-    
+
 //   </tr>
 //   `)
 //   })
@@ -255,6 +236,3 @@ $(function () {
 //   <td>Sum</td>
 //   </tr>`)
 // $("table tbody#basket-list").append(basket)
-
-
-
